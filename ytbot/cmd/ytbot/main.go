@@ -53,7 +53,8 @@ var (
 
 	// Channels
 	channelIds = map[channelName]channelId{
-		"Mentour Pilot": "UCwpHKudUkP5tNgmMdexB3ow",
+		"Mentour Pilot":   "UCwpHKudUkP5tNgmMdexB3ow",
+		"LewDix Aviation": "UCPiPmwDammRsj7ZIzKyc74A",
 	}
 )
 
