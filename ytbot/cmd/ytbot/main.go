@@ -63,6 +63,7 @@ var (
 		"74 Gear":             "UCovVc-qqwYp8oqwO3Sdzx7w", // Tardoe: https://discord.com/channels/207038656311984139/1201388609853468816/1201399096523628606
 		"Stig Aviation":       "UCm64eitQ4ZRTJ-6LPH5RnFg", // Tardoe: https://discord.com/channels/207038656311984139/1201388609853468816/1201399096523628606
 		"Rebuild Rescue":      "UCPygLEFniGZmehxouDK-vbw", // Boxie: https://discord.com/channels/207038656311984139/1201388609853468816/1201412499849871401
+		"lucaas":              "UCfb2YpWR9FWTJMjzvAlP0_Q",
 	}
 )
 
