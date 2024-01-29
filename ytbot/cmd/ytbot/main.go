@@ -55,13 +55,14 @@ var (
 	// Channels to monitor
 	channelIds = map[channelName]channelId{
 		"Mentour Pilot":       "UCwpHKudUkP5tNgmMdexB3ow",
-		"LewDix Aviation":     "UCPiPmwDammRsj7ZIzKyc74A",
-		"The Flying Reporter": "UCwqdeuoXeCiI3CNPRFnnBFQ",
-		"Mentour Now!":        "UCTbcSRduRJJTMaQhUVqywRw",
-		"Stefan Drury":        "UCG1HLA8IEqZ09_C_7u5tUjQ",
-		"Airforceproud95":     "UCfoK9LI9vmQQ36zqsFZtNJQ",
-		"74 Gear":             "UCovVc-qqwYp8oqwO3Sdzx7w",
-		"Stig Aviation":       "UCm64eitQ4ZRTJ-6LPH5RnFg",
+		"LewDix Aviation":     "UCPiPmwDammRsj7ZIzKyc74A", // Tardoe: https://discord.com/channels/207038656311984139/1201388609853468816/1201398856190013540
+		"The Flying Reporter": "UCwqdeuoXeCiI3CNPRFnnBFQ", // Tardoe: https://discord.com/channels/207038656311984139/1201388609853468816/1201398856190013540
+		"Mentour Now!":        "UCTbcSRduRJJTMaQhUVqywRw", // Tardoe: https://discord.com/channels/207038656311984139/1201388609853468816/1201398856190013540
+		"Stefan Drury":        "UCG1HLA8IEqZ09_C_7u5tUjQ", // Tardoe: https://discord.com/channels/207038656311984139/1201388609853468816/1201398856190013540
+		"Airforceproud95":     "UCfoK9LI9vmQQ36zqsFZtNJQ", // Tardoe: https://discord.com/channels/207038656311984139/1201388609853468816/1201399096523628606
+		"74 Gear":             "UCovVc-qqwYp8oqwO3Sdzx7w", // Tardoe: https://discord.com/channels/207038656311984139/1201388609853468816/1201399096523628606
+		"Stig Aviation":       "UCm64eitQ4ZRTJ-6LPH5RnFg", // Tardoe: https://discord.com/channels/207038656311984139/1201388609853468816/1201399096523628606
+		"Rebuild Rescue":      "UCPygLEFniGZmehxouDK-vbw", // Boxie: https://discord.com/channels/207038656311984139/1201388609853468816/1201412499849871401
 	}
 )
 
