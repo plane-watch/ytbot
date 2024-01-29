@@ -53,8 +53,9 @@ var (
 
 	// Channels
 	channelIds = map[channelName]channelId{
-		"Mentour Pilot":   "UCwpHKudUkP5tNgmMdexB3ow",
-		"LewDix Aviation": "UCPiPmwDammRsj7ZIzKyc74A",
+		"Mentour Pilot":       "UCwpHKudUkP5tNgmMdexB3ow",
+		"LewDix Aviation":     "UCPiPmwDammRsj7ZIzKyc74A",
+		"The Flying Reporter": "UCwqdeuoXeCiI3CNPRFnnBFQ",
 	}
 )
 
