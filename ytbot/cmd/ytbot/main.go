@@ -150,7 +150,7 @@ func runApp(cliContext *cli.Context) error {
 			log := log.With().
 				Str("kind", item.Id.Kind).
 				Str("video_id", item.Id.VideoId).
-				Str("title", item.Snippet.Title).
+				Str("title", html.UnescapeString(item.Snippet.Title)).
 				Logger()
 
 			// If item is a video
