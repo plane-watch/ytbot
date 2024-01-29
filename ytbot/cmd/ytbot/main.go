@@ -65,6 +65,7 @@ var (
 		"Rebuild Rescue":      "UCPygLEFniGZmehxouDK-vbw", // Boxie: https://discord.com/channels/207038656311984139/1201388609853468816/1201412499849871401
 		"lucaas":              "UCfb2YpWR9FWTJMjzvAlP0_Q",
 		"REAL ATC":            "UC-cpMHfDwhDkoQ7oTK8Y_6w",
+		"VASAviation":         "UCuedf_fJVrOppky5gl3U6QQ", // Nedwos: https://discord.com/channels/207038656311984139/1201388609853468816/1201501902270115943
 	}
 )
 
