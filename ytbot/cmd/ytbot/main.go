@@ -114,8 +114,9 @@ func runApp(cliContext *cli.Context) error {
 			date_posted TEXT NOT NULL
 		 ) WITHOUT ROWID;`)
 	if err != nil {
-		fmt.Println(err)
+		log.Fatal().AnErr("err", err).Msg("error creating table videos_posted")
 	}
+
 	// create channel_check times
 	log.Debug().Msg("creating channel_check_times table if required")
 	_, err = db.Exec(
@@ -124,7 +125,7 @@ func runApp(cliContext *cli.Context) error {
 			date_checked TEXT NOT NULL
 		 ) WITHOUT ROWID;`)
 	if err != nil {
-		fmt.Println(err)
+		log.Fatal().AnErr("err", err).Msg("error creating table channel_check_times")
 	}
 
 	// prep youtube connection
@@ -202,7 +203,6 @@ func runApp(cliContext *cli.Context) error {
 
 					// webhook here
 					data := fmt.Sprintf(`{"content": "New video from **%s**\nhttps://youtu.be/%s"}`, html.UnescapeString(item.Snippet.ChannelTitle), item.Id.VideoId)
-					fmt.Println(data)
 					whReq, err := http.NewRequest("POST", cliContext.String("webhook"), bytes.NewReader([]byte(data)))
 					if err != nil {
 						log.Fatal().AnErr("err", err).Msg("error preparing http request")
