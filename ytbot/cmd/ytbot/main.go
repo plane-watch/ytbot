@@ -58,6 +58,7 @@ var (
 		"The Flying Reporter": "UCwqdeuoXeCiI3CNPRFnnBFQ",
 		"Mentour Now!":        "UCTbcSRduRJJTMaQhUVqywRw",
 		"Stefan Drury":        "UCG1HLA8IEqZ09_C_7u5tUjQ",
+		"Airforceproud95":     "UCfoK9LI9vmQQ36zqsFZtNJQ",
 	}
 )
 
