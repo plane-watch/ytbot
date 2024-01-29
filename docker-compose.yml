@@ -1,0 +1,19 @@
+---
+version: '3.8'
+
+services:
+
+  ytbot:
+    container_name: ytbot
+    build:
+      context: .
+      dockerfile: Dockerfile.ytbot
+    image: ytbot
+    tty: true
+    restart: always
+    environment:
+      - YTBOT_GC_API_KEY=${YTBOT_GC_API_KEY}
+      - YTBOT_WEBHOOK=${YTBOT_WEBHOOK}
+      - YTBOT_DBFILE=/opt/ytbot/data/db.sqlite3
+    volumes:
+      - ./data:/opt/ytbot/data
