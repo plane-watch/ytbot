@@ -59,6 +59,7 @@ var (
 		"Mentour Now!":        "UCTbcSRduRJJTMaQhUVqywRw",
 		"Stefan Drury":        "UCG1HLA8IEqZ09_C_7u5tUjQ",
 		"Airforceproud95":     "UCfoK9LI9vmQQ36zqsFZtNJQ",
+		"74 Gear":             "UCovVc-qqwYp8oqwO3Sdzx7w",
 	}
 )
 
