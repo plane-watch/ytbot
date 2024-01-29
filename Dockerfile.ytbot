@@ -18,6 +18,7 @@ RUN set -x && \
     # Install required packages
     TEMP_PACKAGES=() && \
     KEPT_PACKAGES=() && \
+    KEPT_PACKAGES+=(ca-certificates) && \
     KEPT_PACKAGES+=(net-tools) && \
     KEPT_PACKAGES+=(procps) && \
     KEPT_PACKAGES+=(xz-utils) && \
