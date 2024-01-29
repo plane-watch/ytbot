@@ -2,4 +2,4 @@
 #shellcheck shell=bash
 
 fdmove -c 2 1 /usr/local/bin/ytbot
-sleep 120m
+sleep 30m

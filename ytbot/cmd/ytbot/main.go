@@ -103,12 +103,22 @@ func runApp(cliContext *cli.Context) error {
 	}
 	defer db.Close()
 
-	// create table if required
+	// create videos_posted table if required
 	log.Debug().Msg("creating videos_posted table if required")
 	_, err = db.Exec(
 		`CREATE TABLE IF NOT EXISTS videos_posted (
 			id TEXT PRIMARY KEY UNIQUE,
 			date_posted TEXT NOT NULL
+		 ) WITHOUT ROWID;`)
+	if err != nil {
+		fmt.Println(err)
+	}
+	// create channel_check times
+	log.Debug().Msg("creating channel_check_times table if required")
+	_, err = db.Exec(
+		`CREATE TABLE IF NOT EXISTS channel_check_times (
+			id TEXT PRIMARY KEY UNIQUE,
+			date_checked TEXT NOT NULL
 		 ) WITHOUT ROWID;`)
 	if err != nil {
 		fmt.Println(err)
@@ -133,6 +143,24 @@ func runApp(cliContext *cli.Context) error {
 			Str("channel_id", string(cId)).
 			Time("cutoff_date", publishedAfter).
 			Logger()
+
+		// check if channel was checked within 12 hours
+		r, err := db.Query(`SELECT * FROM channel_check_times WHERE id=?;`, cId)
+		if err != nil {
+			log.Fatal().AnErr("err", err).Msg("error querying db")
+		}
+		if r.Next() {
+			log.Debug().Msg("channel checked less than 12 hours ago, skipping")
+			r.Close()
+			continue
+		}
+		r.Close()
+
+		// put in db
+		_, err = db.Query(`INSERT INTO channel_check_times (id, date_checked) VALUES (?, datetime('now'));`, cId)
+		if err != nil {
+			log.Fatal().AnErr("err", err).Msg("error inserting video into db")
+		}
 
 		log.Info().Msg("checking for new videos")
 
@@ -159,7 +187,7 @@ func runApp(cliContext *cli.Context) error {
 				// check if item has already been posted
 				r, err := db.Query(`SELECT * FROM videos_posted WHERE id=?;`, item.Id.VideoId)
 				if err != nil {
-					panic(err)
+					log.Fatal().AnErr("err", err).Msg("error querying db")
 				}
 				if r.Next() {
 					log.Debug().Msg("item already posted")
@@ -211,7 +239,11 @@ func runApp(cliContext *cli.Context) error {
 	log.Debug().Msg("cleaning db")
 	_, err = db.Exec(`DELETE FROM videos_posted WHERE date_posted < datetime('now','-30 days');`)
 	if err != nil {
-		log.Fatal().AnErr("err", err).Msg("error deleting old records from db")
+		log.Fatal().AnErr("err", err).Msg("error deleting old videos_posted video records from db")
+	}
+	_, err = db.Exec(`DELETE FROM channel_check_times WHERE date_checked < datetime('now','-12 hours');`)
+	if err != nil {
+		log.Fatal().AnErr("err", err).Msg("error deleting old channel_check_times records from db")
 	}
 	_, err = db.Exec(`VACUUM;`)
 	if err != nil {
