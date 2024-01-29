@@ -5,6 +5,7 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"html"
 	"net/http"
 	"os"
 	"time"
@@ -169,7 +170,7 @@ func runApp(cliContext *cli.Context) error {
 					log.Debug().Msg("posting item")
 
 					// webhook here
-					data := fmt.Sprintf(`{"content": "New video from **%s**\nhttps://youtu.be/%s"}`, item.Snippet.ChannelTitle, item.Id.VideoId)
+					data := fmt.Sprintf(`{"content": "New video from **%s**\nhttps://youtu.be/%s"}`, html.UnescapeString(item.Snippet.ChannelTitle), item.Id.VideoId)
 					fmt.Println(data)
 					whReq, err := http.NewRequest("POST", cliContext.String("webhook"), bytes.NewReader([]byte(data)))
 					if err != nil {
