@@ -1,8 +1,8 @@
 FROM golang:1.21.6-bookworm AS builder
 
-COPY / /src/bordercontrol
+COPY / /src/ytbot
 
-WORKDIR /src/bordercontrol/bordercontrol
+WORKDIR /src/ytbot/ytbot
 
 RUN go mod tidy && \
     go build ./... && \
