@@ -51,7 +51,7 @@ var (
 		},
 	}
 
-	// Channels
+	// Channels to monitor
 	channelIds = map[channelName]channelId{
 		"Mentour Pilot":       "UCwpHKudUkP5tNgmMdexB3ow",
 		"LewDix Aviation":     "UCPiPmwDammRsj7ZIzKyc74A",
@@ -60,6 +60,7 @@ var (
 		"Stefan Drury":        "UCG1HLA8IEqZ09_C_7u5tUjQ",
 		"Airforceproud95":     "UCfoK9LI9vmQQ36zqsFZtNJQ",
 		"74 Gear":             "UCovVc-qqwYp8oqwO3Sdzx7w",
+		"Stig Aviation":       "UCm64eitQ4ZRTJ-6LPH5RnFg",
 	}
 )
 
