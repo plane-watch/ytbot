@@ -125,7 +125,7 @@ func runApp(cliContext *cli.Context) error {
 	for cN, cId := range channelIds {
 
 		// published videos past 24 hours
-		publishedAfter := time.Now().Add(-(time.Hour * 240))
+		publishedAfter := time.Now().Add(-(time.Hour * 24))
 		publishedAfterStr := publishedAfter.Format("2006-01-02T15:04:05Z")
 
 		log := log.With().
