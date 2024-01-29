@@ -1,4 +1,5 @@
 #!/command/with-contenv bash
 #shellcheck shell=bash
 
-exec /scripts/run_ytbot.sh
+fdmove -c 2 1 /usr/local/bin/ytbot
+sleep 30m

@@ -195,6 +195,7 @@ func runApp(cliContext *cli.Context) error {
 			} else {
 				log.Debug().Msg("skipping as item is not video")
 			}
+			time.Sleep(time.Second * 10)
 		}
 	}
 
