@@ -1,6 +1,6 @@
 # plane.watch Discord Youtube Bot
 
-Posts new videos to Youtube.
+Posts new Youtube videos to Discord.
 
 In the root of the repository, create a `.env` file containing the following:
 
