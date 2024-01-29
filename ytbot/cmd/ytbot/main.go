@@ -56,6 +56,7 @@ var (
 		"Mentour Pilot":       "UCwpHKudUkP5tNgmMdexB3ow",
 		"LewDix Aviation":     "UCPiPmwDammRsj7ZIzKyc74A",
 		"The Flying Reporter": "UCwqdeuoXeCiI3CNPRFnnBFQ",
+		"Mentour Now!":        "UCTbcSRduRJJTMaQhUVqywRw",
 	}
 )
 
